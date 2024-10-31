@@ -1,0 +1,402 @@
+<?php
+$countrys = array("3" => "Андорра","4" => "ОАЭ","5" => "Афганистан","6" => "Антигуа и Барбуда","7" => "Ангилья","8" => "Албания","9" => "Армения","10" => "Кюрасао","11" => "Ангола","12" => "Антарктида","13" => "Аргентина","14" => "Американское Самоа","15" => "Австрия","16" => "Австралия","17" => "Аруба","18" => "Азербайджан","19" => "Босния и Герцеговина","20" => "Барбадос","21" => "Бангладеш","22" => "Бельгия","23" => "Буркина Фасо","24" => "Болгария","25" => "Бахрейн","26" => "Бурунди","27" => "Бенин","28" => "Бермуды","29" => "Бруней","30" => "Боливия","31" => "Бразилия","32" => "Багамские острова","33" => "Бутан","35" => "Ботсвана","36" => "Беларусь","37" => "Белиз","38" => "Канада","39" => "Кокосовые острова","40" => "Демократическая Республика Конго","41" => "Центрально-Африканская Республика","42" => "Конго","43" => "Швейцария","44" => "Кот-д’Ивуар","45" => "Острова Кука","46" => "Чили","47" => "Камерун","48" => "Китай","49" => "Колумбия","50" => "Коста-Рика","51" => "Куба","52" => "Кабо-Верде","53" => "Остров Рождества","54" => "Кипр","55" => "Чехия","56" => "Германия","57" => "Джибути","58" => "Дания","59" => "Доминика","60" => "Доминиканская республика","61" => "Алжир","62" => "Эквадор","63" => "Эстония","64" => "Египет","66" => "Эритрея","67" => "Испания","68" => "Эфиопия","69" => "Финляндия","70" => "Фиджи","71" => "Фолклендские острова","72" => "Микронезия","73" => "Фарерские острова","74" => "Франция","75" => "Синт-Мартен","76" => "Габон","77" => "Великобритания","78" => "Гренада","79" => "Грузия","80" => "Французская Гвинея","81" => "Гана","82" => "Гибралтар","83" => "Гренландия","84" => "Гамбия","85" => "Гвинея","86" => "Гваделупа","87" => "Экваториальная Гвинея","88" => "Греция","89" => "Южная Георгия и Южные Сандвичевы острова","90" => "Гватемала","91" => "Гуам","92" => "Гвинея-Бисау","93" => "Гайана","94" => "Гонконг","96" => "Гондурас","97" => "Хорватия","98" => "Гаити","99" => "Венгрия","100" => "Индонезия","101" => "Ирландия","102" => "Израиль","103" => "Индия","104" => "Британская территория в Индийском океане","105" => "Ирак","106" => "Иран","107" => "Исландия","108" => "Италия","109" => "Ямайка","110" => "Иордания","111" => "Япония","112" => "Кения","113" => "Кыргызстан","114" => "Камбоджа","115" => "Кирибати","116" => "Коморские острова","117" => "Сент-Китс и Невис","118" => "Северная Корея","119" => "Южная Корея","120" => "Кувейт","121" => "Каймановы острова","122" => "Казахстан","123" => "Лаос","124" => "Ливан","125" => "Святая Люсия","126" => "Лихтенштейн","127" => "Шри-Ланка","128" => "Либерия","129" => "Лесото","130" => "Литва","131" => "Люксембург","132" => "Латвия","133" => "Ливия","134" => "Марокко","135" => "Монако","136" => "Молдова","137" => "Мадагаскар","138" => "Маршалловы острова","139" => "Македония","140" => "Мали","141" => "Мьянма","142" => "Монголия","143" => "Макао","144" => "Северные Марианские острова","145" => "Мартиника","146" => "Мавритания","147" => "Монтсеррат","148" => "Мальта","149" => "Маврикий","150" => "Мальдивские острова","151" => "Малави","152" => "Мексика","153" => "Малайзия","154" => "Мозамбик","155" => "Намибия","156" => "Новая Каледония","157" => "Нигер","158" => "Норфолк","159" => "Нигерия","160" => "Никарагуа","161" => "Нидерланды","162" => "Норвегия","163" => "Непал","164" => "Науру","165" => "Ниуэ","166" => "Новая Зеландия","167" => "Оман","168" => "Панама","169" => "Перу","170" => "Французская Полинезия","171" => "Папуа Новая Гвинея","172" => "Филиппины","173" => "Пакистан","174" => "Польша","175" => "Сен-Пьер и Микелон","176" => "Питкэрн","177" => "Пуэрто-Рико","178" => "Палестина","179" => "Португалия","180" => "Палау","181" => "Парагвай","182" => "Катар","183" => "Реюньон","184" => "Румыния","185" => "Россия","186" => "Руанда","187" => "Саудовская Аравия","188" => "Соломоновы острова","189" => "Сейшеллы","190" => "Судан","191" => "Швеция","192" => "Сингапур","193" => "Остров Святой Елены","194" => "Словения","195" => "Свальбард и Ян-Майен","196" => "Словакия","197" => "Сьерра-Леоне","198" => "Сан-Марино","199" => "Сенегал","200" => "Сомали","201" => "Суринам","202" => "Сан-Томе и Принсипи","203" => "Сальвадор","204" => "Сирия","205" => "Свазиленд","206" => "Туркс и Кейкос","207" => "Чад","208" => "Французские Южные и Антарктические территории","209" => "Того","210" => "Таиланд","211" => "Таджикистан","212" => "Токелау","213" => "Туркменистан","214" => "Тунис","215" => "Тонга","216" => "Восточный Тимор","217" => "Турция","218" => "Тринидад и Тобаго","219" => "Тувалу","220" => "Тайвань","221" => "Танзания","222" => "Украина","223" => "Уганда","224" => "Внешние малые острова США","225" => "США","226" => "Уругвай","227" => "Узбекистан","228" => "Ватикан","229" => "Сент-Винсент и Гренадины","230" => "Венесуэла","231" => "Британские Виргинские острова","232" => "Виргинские Острова США","233" => "Вьетнам","234" => "Вануату","235" => "Уоллис и Футуна","236" => "Самоа","237" => "Йемен","238" => "Майотта","239" => "Сербия","240" => "ЮАР","241" => "Замбия","242" => "Черногория","243" => "Зимбабве","245" => "Косово","247" => "Аландские острова","248" => "Гернси","249" => "Остров Мэн","250" => "Джерси","251" => "Сен-Бартелеми","252" => "Сен-Мартен","253" => "Бонэйр, Синт-Эстатиус и Саба","254" => "Южный Судан")
+?>
+<style type="text/css">
+    .table-bordered {
+        border: 1px solid #ddd;
+    }
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    table {
+        background-color: transparent;
+    }
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+    .table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+        border-top: 0;
+    }
+    .table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+        border-bottom-width: 2px;
+    }
+    .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+        border: 1px solid #ddd;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(221, 221, 221);
+    }
+    .table > thead > tr > th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #ddd;
+    }
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+    .table-striped > tbody > tr:nth-of-type(2n+1) {
+        background-color: #f9f9f9;
+    }
+    .text-center{text-align: center;}
+    .full-width{width: 100%;}
+</style>
+<div class="greyborder">
+    <h3>Настройки</h3>
+    <hr>
+    <form name="settings" method="post" action="<?php echo $this->getMvcUrl(null, null, 'updated=true')?>" enctype="multipart/form-data">
+        <!-- Имя поля используется в check_admin_referer -->
+        <?php 
+            if (function_exists ('wp_nonce_field') ){
+                wp_nonce_field('profitfit_form'); 
+            }
+        ?>
+        <table class="form-table">
+            <tr>
+                <th scope="row"><strong>Ключ доступа:</strong></th>
+                <td width="400">
+                    <input type="text" id="ads_access_key" size=40 value="<?php if($ads_access_key) echo esc_textarea($ads_access_key) ?>" name="ads_access_key"/>
+
+                    <p class="description" id="ads_access_key"></p>
+                </td>
+                <td>
+                    <input type="hidden" name="action" value="update" />
+                    <input type="submit" name="submit-key" class="button button-primary" value="Сохранить" /> 
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <?php if(!$ads_access_key && ($adsenses || $texts || $codes || $tizers || $comments)):?>
+        <hr>
+        <h3>Локальные изменения</h3>
+        <form name="settings" method="post" action="<?php echo $this->getMvcUrl(null, null, 'updated=true')?>">
+        <?php if($adsenses):?>
+            <h4>Adesense</h4>
+            <table class="table table-striped table-bordered">
+                <tr><th>Название</th><th>Позиция</th><th>Максимальное разрешение блока</th><th>AdSense Publisher ID</th><th>SlotID(UnitID)</th><th>Включен</th></tr>
+                <?foreach ($adsenses as $adsense):?>
+                    <tr>
+                        <td><?php echo $adsense->name;?></td>
+                        <td><?php echo isset($positions[$adsense->position]) ? $positions[$adsense->position] : '';?></td>
+                        <td><?php echo $adsense->max_res;?></td>
+                        <td>
+                            <input type="hidden" name="adsense[<?php echo $adsense->id;?>][pub_id]" value="<?php echo $adsense->pub_id;?>"/>
+                            <input class="full-width" type="text" name="adsense[<?php echo $adsense->id;?>][new_pub_id]" value="<?php echo $adsense->pub_id;?>"/>         
+                        </td>
+                        <td>
+                            <input type="hidden" name="adsense[<?php echo $adsense->id;?>][slot_id]" value="<?php echo $adsense->slot_id;?>"/>
+                            <input class="full-width" type="text" name="adsense[<?php echo $adsense->id;?>][new_slot_id]" value="<?php echo $adsense->slot_id;?>"/>         
+                        </td>
+                        <td class="text-center">
+                            <input type="hidden" name="adsense[<?php echo $adsense->id;?>][is_active]" value="<?php echo $adsense->is_active;?>"/>
+                            <input type="checkbox" name="adsense[<?php echo $adsense->id;?>][new_is_active]" <?php echo $adsense->is_active ? 'checked' : '';?> value="1"/>
+                        </td>
+                    </tr>
+                <?endforeach;?>
+            </table>
+        <?php endif;?>
+
+        <?php if($codes):?>
+            <h4>Блоки кода</h4>
+            <table class="table table-striped table-bordered">
+                <tr><th>Название</th><th>Позиция</th><th>Разрешения</th><th>Рубрики</th><th>Расписание</th><th>Код</th><th>Включен</th></tr>
+                <?foreach ($codes as $code):?>
+                    <tr>
+                        <td><?php echo $code->name;?></td>
+                        <td><?php echo isset($positions[$code->position]) ? $positions[$code->position] : '';?></td>
+                        <td><?php echo str_replace(array('][','[', ']'),array(',<br>','',''),$code->resolutions);?></td>
+                        <td>
+                            <?php if($code->in_rubrics || $code->ex_rubrics):?>
+                                <ul>
+                                    <?php if($code->in_rubrics){
+                                            echo '<li><i>Вывод в:</i></li>';
+                                            $in_rubrics = explode(',', str_replace(array('][','[', ']'), array(',','',''), $code->in_rubrics));
+                                            foreach ($in_rubrics as $inr) {
+                                                echo '<li> - ' . $cats[$inr] . '</li>';
+                                            }
+                                        }
+                                    ?>
+                                    <?php if($code->ex_rubrics){
+                                            echo '<li><i>Исключая:</i></li>';
+                                            $ex_rubrics = explode(',', str_replace(array('][','[', ']'), array(',','',''), $code->ex_rubrics));
+                                            foreach ($ex_rubrics as $inr) {
+                                                echo '<li> - ' . $cats[$inr] . '</li>';
+                                            }
+                                        }
+                                    ?>  
+                                </ul>
+                            <?php endif;?>       
+                        </td>
+                        <td>
+                            <?php if($code->by_timetable){
+                                 echo 'Дни недели: ';
+                                 if($code->days_of_week == '[1][2][3][4][5][6][0]'){
+                                     echo 'Все';
+                                 }else{
+                                     echo str_replace(array('[1]','[2]','[3]','[4]','[5]','[6]','[7]','[8]'), array('Пн','Вт','Ср','Чт','Пт','Сб','Вс'), $code->days_of_week);
+                                 }
+                                 
+                                 echo '<br>' . ($code->not_how ? 'Не показывать с ' : 'Показывать с ') . $code->from_time . ':00 по ' . $code->to_time . ':00<br>';
+                             }?>    
+                        </td>
+                        <td>
+                            <textarea class="full-width" rows="5" name="code[<?php echo $code->id;?>][code]"><?php echo stripslashes($code->template)?></textarea>     
+                        </td>
+                        <td class="text-center">
+                            <input type="hidden" name="code[<?php echo $code->id;?>][is_active]" value="<?php echo $code->is_active;?>"/>
+                            <input type="checkbox" name="code[<?php echo $code->id;?>][new_is_active]" <?php echo $code->is_active ? 'checked' : '';?> value="1"/>
+                        </td>
+                    </tr>
+                <?endforeach;?>
+            </table>
+        <?php endif;?>
+
+        <?php if($texts):?>
+            <h4>Блоки текста</h4>
+            <table class="table table-striped table-bordered">
+                <tr><th>Название</th><th>Позиция</th><th>Рубрики</th><th>ГЕО</th><th>Ссылка</th><th>Включен</th></tr>
+                <?foreach ($texts as $text):?>
+                    <tr>
+                        <td><?php echo $text->name;?></td>
+                        <td><?php echo isset($positions[$text->position]) ? $positions[$text->position] : '';?></td>
+                        <td>
+                            <?php if($text->in_rubrics || $text->ex_rubrics):?>
+                                <ul>
+                                    <?php if($text->in_rubrics){
+                                            echo '<li><i>Вывод в:</i></li>';
+                                            $in_rubrics = explode(',', str_replace(array('][','[', ']'), array(',','',''), $text->in_rubrics));
+                                            foreach ($in_rubrics as $inr) {
+                                                echo '<li> - ' . $cats[$inr] . '</li>';
+                                            }
+                                        }
+                                    ?>
+                                    <?php if($text->ex_rubrics){
+                                            echo '<li><i>Исключая:</i></li>';
+                                            $ex_rubrics = explode(',', str_replace(array('][','[', ']'), array(',','',''), $text->ex_rubrics));
+                                            foreach ($ex_rubrics as $inr) {
+                                                echo '<li> - ' . $cats[$inr] . '</li>';
+                                            }
+                                        }
+                                    ?>  
+                                </ul>
+                            <?php endif;?>       
+                        </td>
+                        <td>
+                           <?php if($text->country):?>
+                               <ul>
+                                   <?php if($text->country){
+                                           $country = explode(',', str_replace(array('][','[', ']'), array(',','',''), $text->country));
+                                           foreach ($country as $c) {
+                                               echo '<li> - ' . $countrys[$c] . '</li>';
+                                           }
+                                       }
+                                   ?>
+                               </ul>
+                           <?php endif;?>    
+                        </td>
+                        <td>
+                            <?php
+                                preg_match_all('#href="(.*)"#U', $text->template, $links);
+                                $template = $text->template;
+                                $cpa = json_decode($text->links_nets, true);
+                                if($links[1]){
+                                    $was = array();
+                                    foreach ($links[1] as $n => $link) {
+                                        $template = str_replace($link, '#', $template);
+                                        if(strpos($link, 'coded:') !== false){
+                                            $decoded = base64_decode(substr($link, 6));
+                                            if($decoded) $link = $decoded;
+                                        }  
+                                        
+                                        if(!$link) continue;
+                                        if($urlArray = unserialize($link)){
+                                            foreach (array_keys($urlArray) as $i => $url) {
+                                                if(in_array($url, $was)) continue;
+                                                $was[] = $url;
+                                                $url = str_replace('&amp;', '&', $url);
+                                                echo '<input type="hidden" name="text[' . $text->id . '][' . $n . '][' . $i . '][was]" value="' . $url . '"/>';
+                                                
+                                                if($cpa && is_array($cpa) && isset($cpa[$url]) && $cpa[$url] != 'Нет')
+                                                    echo $cpa[$url];
+                                                echo '<input class="full-width" type="text" name="text[' . $text->id . '][' . $n . '][' . $i . '][new]" value="' . $url . '"/>';
+                                                
+                                            }
+                                        }else{
+                                            
+                                            if(in_array($link, $was)) continue;
+                                            $was[] = $link;
+                                            if($cpa && is_array($cpa) && isset($cpa[$link]) && $cpa[$url] != 'Нет')
+                                                echo $cpa[$link];
+
+                                            $link = str_replace('&amp;', '&', $link);
+                                            
+                                            echo '<input type="hidden" name="text[' . $text->id . '][' . $n . '][was]" value="' . $link . '"/>';
+                                            
+                                            
+                                            echo '<input class="full-width" type="text" name="text[' . $text->id . '][' . $n . '][new]" value="' . $link . '"/>';
+                                        }
+                                    }
+                                }   
+                            ?>
+                        </td>
+                        <td class="text-center">
+                            <input type="hidden" name="text[<?php echo $text->id;?>][is_active]" value="<?php echo $text->is_active;?>"/>
+                            <input type="checkbox" name="text[<?php echo $text->id;?>][new_is_active]" <?php echo $text->is_active ? 'checked' : '';?> value="1"/>
+                        </td>
+                    </tr>
+                    <tr><td colspan="6"><?php echo '<style>' . $text->css . '</style>'; echo $template;?></td>
+                <?endforeach;?>
+            </table>
+        <?php endif;?>
+
+        <?php if($tizers):?>
+            <h4>Тизеры</h4>
+            <table class="table table-striped table-bordered">
+                <tr><th>Тизер</th><th>Текст</th><th>Группа</th><th>Ссылка</th><th>Включен</th></tr>
+                <?foreach ($tizers as $tizer):?>
+                    <tr>
+                        <td><img src="<?php echo \AdsNS\PrimeAds::$ADS_UPLOADS_URL.$tizer->image;?>" style="width: 100px;"></td>
+                        <td>Заголовок: <br><?=$tizer->header;?><br><br>Текст: <br><?=$tizer->text;?></td>
+                        <td><?php echo isset($groups[$tizer->forigin_id]) ? $groups[$tizer->forigin_id] : '';?></td>
+                        <td>
+                            <?php
+                                $cpa = json_decode($tizer->links_nets, true);
+                                $link = $tizer->url;
+                                if($urlArray = unserialize($link)){
+                                    foreach (array_keys($urlArray) as $i => $url) {
+                                        $url = str_replace('&amp;', '&', $url);
+                                        if(in_array($url, $was)) continue;
+                                        $was[] = $url;
+                                        echo '<input type="hidden" name="tizer[' . $tizer->id . '][' . $i . '][was]" value="' . $url . '"/>';
+                                        
+                                        if($cpa && is_array($cpa) && isset($cpa[$url]) && $cpa[$url] != 'Нет')
+                                            echo $cpa[$url];
+                                        echo '<input class="full-width" type="text" name="tizer[' . $tizer->id . '][' . $i . '][new]" value="' . $url . '"/>';
+                                    }
+                                }else{
+                                    $link = str_replace('&amp;', '&', $link);
+                                    if(in_array($link, $was)) continue;
+                                    $was[] = $link;
+                                    echo '<input type="hidden" name="tizer[' . $tizer->id . '][was]" value="' . $link . '"/>';
+                                    if($cpa && is_array($cpa) && isset($cpa[$link]) && $cpa[$link] != 'Нет')
+                                        echo $cpa[$link];
+                                    echo '<input class="full-width" type="text" name="tizer[' . $tizer->id . '][new]" value="' . $link . '"/>';
+                                } 
+                            ?>       
+                        </td>
+                        <td class="text-center">
+                            <input type="hidden" name="tizer[<?php echo $tizer->id;?>][is_active]" value="<?php echo $tizer->is_active;?>"/>
+                            <input type="checkbox" name="tizer[<?php echo $tizer->id;?>][new_is_active]" <?php echo $tizer->is_active ? 'checked' : '';?> value="1"/>
+                        </td>
+                    </tr>
+                <?endforeach;?>
+            </table>
+        <?php endif;?>
+
+        <?php if($comments):?>
+            <h4>Комментарии</h4>
+            <table class="table table-striped table-bordered">
+                <tr><th>Название</th><th>Позиция</th><th>Рубрики</th><th>ГЕО</th><th>Ссылка</th><th>Включен</th></tr>
+                <?foreach ($comments as $comment):?>
+                    <tr>
+                        <td><?php echo $comment->name;?></td>
+                        <td><?php echo isset($positions[$comment->position]) ? $positions[$comment->position] : '';?></td>
+                        <td>
+                            <?php if($comment->in_rubrics || $comment->ex_rubrics):?>
+                                <ul>
+                                    <?php if($comment->in_rubrics){
+                                            echo '<li><i>Вывод в:</i></li>';
+                                            $in_rubrics = explode(',', str_replace(array('][','[', ']'), array(',','',''), $comment->in_rubrics));
+                                            foreach ($in_rubrics as $inr) {
+                                                echo '<li> - ' . $cats[$inr] . '</li>';
+                                            }
+                                        }
+                                    ?>
+                                    <?php if($comment->ex_rubrics){
+                                            echo '<li><i>Исключая:</i></li>';
+                                            $ex_rubrics = explode(',', str_replace(array('][','[', ']'), array(',','',''), $comment->ex_rubrics));
+                                            foreach ($ex_rubrics as $inr) {
+                                                echo '<li> - ' . $cats[$inr] . '</li>';
+                                            }
+                                        }
+                                    ?>  
+                                </ul>
+                            <?php endif;?>       
+                        </td>
+                        <td>
+                           <?php if($comment->country):?>
+                               <ul>
+                                   <?php if($comment->country){
+                                           $country = explode(',', str_replace(array('][','[', ']'), array(',','',''), $comment->country));
+                                           foreach ($country as $c) {
+                                               echo '<li> - ' . $countrys[$c] . '</li>';
+                                           }
+                                       }
+                                   ?>
+                               </ul>
+                           <?php endif;?>    
+                        </td>
+                        <td>
+                            <?php
+                                preg_match_all('#href="(.*)"#U', $comment->template, $links);
+                                $template = $comment->template;
+                                $template = str_replace("{{image}}", \AdsNS\PrimeAds::$ADS_UPLOADS_URL.$comment->image, $template);
+                                $cpa = json_decode($comment->links_nets, true);
+                                if($links[1]){
+                                    $was = array();
+                                    foreach ($links[1] as $n => $link) {
+                                        $template = str_replace($link, '#', $template);
+                                        if(strpos($link, 'coded:') !== false){
+                                            $decoded = base64_decode(substr($link, 6));
+                                            if($decoded) $link = $decoded;
+                                        }  
+                                        
+                                        if(!$link) continue;
+                                        
+                                        if($urlArray = unserialize($link)){
+                                            foreach (array_keys($urlArray) as $i => $url) {
+                                                if(in_array($url, $was)) continue;
+                                                $was[] = $url;
+                                                $url = str_replace('&amp;', '&', $url);
+                                                echo '<input type="hidden" name="comment[' . $comment->id . '][' . $n . '][' . $i . '][was]" value="' . $url . '"/>';
+                                                
+                                                if($cpa && is_array($cpa) && isset($cpa[$url]) && $cpa[$url] != 'Нет')
+                                                    echo $cpa[$url];
+                                                echo '<input class="full-width" type="text" name="comment[' . $comment->id . '][' . $n . '][' . $i . '][new]" value="' . $url . '"/>';
+                                                
+                                            }
+                                        }else{
+                                            if(in_array($link, $was)) continue;
+                                            $was[] = $link;
+                                            $link = str_replace('&amp;', '&', $link);
+                                            echo '<input type="hidden" name="comment[' . $comment->id . '][' . $n . '][was]" value="' . $link . '"/>';
+                                            
+                                            if($cpa && is_array($cpa) && isset($cpa[$link]) && $cpa[$link] != 'Нет')
+                                                echo $cpa[$link];
+                                            echo '<input class="full-width" type="text" name="comment[' . $comment->id . '][' . $n . '][new]" value="' . $link . '"/>';
+                                        }
+                                    }
+                                }   
+                            ?>
+                        </td>
+                        <td class="text-center">
+                            <input type="hidden" name="comment[<?php echo $comment->id;?>][is_active]" value="<?php echo $comment->is_active;?>"/>
+                            <input type="checkbox" name="comment[<?php echo $comment->id;?>][new_is_active]" <?php echo $comment->is_active ? 'checked' : '';?> value="1"/>
+                        </td>
+                    </tr>
+                    <tr><td colspan="6"><?php echo '<style>' . $comment->css . '</style>'; echo str_replace('{{time}}','',$template);?></td>
+                <?endforeach;?>
+            </table>
+        <?php endif;?>
+
+        <input type="submit" name="submit" class="button button-primary" value="Сохранить" /> 
+        </form>
+
+    <?php endif;?>
+</div>
